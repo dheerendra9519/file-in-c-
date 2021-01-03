@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include<conio.h>
+
+int main()
+{
+    FILE *Fpointer;
+    char data[18] = "dheerendra_rajput";
+    int length = strlen(data);
+    int counter;
+    
+    Fpointer = fopen("dheerendra_rajputheerendra.txt","a");
+    if(Fpointer == NULL)
+    {
+        printf("unable to open file");
+    }
+        else
+        {
+            for(counter = 0;counter < length;counter++)
+            {
+            printf("writing the character %c\n",data[counter]);
+            fputc(data[counter],Fpointer);
+        }
+            printf("succesfully open the file ");
+            fclose(Fpointer);
+        }
+        
+        getch ();
+    
+    
+
+    return 0;
+}

@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<conio.h>
+
+
+int main()
+{
+    FILE *pt;
+    char ch;
+    
+    pt = fopen("dheerendra","r" );
+    
+    if(pt == NULL)
+    {
+        printf(" unable to open file");
+        
+    }
+    else
+    {
+        while(!feof(pt))
+        {
+            ch = fgetc(pt);
+            printf("%c",ch);
+            
+        }
+        fclose(pt);
+    }
+    
+    getch();
+    return 0;
+    
+}

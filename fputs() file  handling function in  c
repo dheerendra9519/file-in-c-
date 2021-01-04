@@ -1,0 +1,28 @@
+//done by Dheerendra Rajput
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+    
+    FILE *fpt;
+    
+    char input[25];
+     fpt = fopen("dheerend.txt","w ");
+     if(fpt == NULL)
+     {
+         printf("unabel to open the file");
+         
+     }else
+     {
+         printf(" enter the string to  write to the file  ");
+     
+         gets(input);
+         fputs(input,fpt);
+         printf(" data has written succesfully");
+         
+         fclose(fpt);
+         
+     }
+    getch();
+    

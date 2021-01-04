@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+
+
+int main()
+{
+    FILE *pt;
+    char name[15];
+    int age ;
+    
+    pt = fopen("dheerendra","r" );
+    
+    if(pt == NULL)
+    {
+        printf(" unable to open file");
+        
+    }
+    else
+    {
+        fscanf("%s\t%d",name,&age);
+        printf("%s\t%d",name,age);
+        fclose(pt);
+    }
+    
+    getch();
+    return 0;
+    
+}
